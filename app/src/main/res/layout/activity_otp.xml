@@ -65,24 +65,23 @@
             android:orientation="vertical">
 
 
+            <com.mukeshsolanki.OtpView
+                android:id="@+id/otpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:itemBackground="#EBEBEB"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:OtpItemCount="6"
+                app:OtpLineColor="#096"
+                app:OtpViewType="line">
 
-                <com.mukeshsolanki.OtpView
-                    android:id="@+id/otpView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:focusableInTouchMode="true"
-                    android:itemBackground="#EBEBEB"
-                    app:OtpItemCount="6"
-                    app:OtpViewType="line"
-                    app:OtpLineColor="#096"
-                    android:textColor="@color/black"
-                    android:inputType="number"
-                    android:textStyle="bold">
-
-                </com.mukeshsolanki.OtpView>
+            </com.mukeshsolanki.OtpView>
 
 
             <com.google.android.material.button.MaterialButton
@@ -91,9 +90,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:backgroundTint="#F2FAE9"
                 android:text="Verify"
-                android:layout_marginBottom="10dp"
                 android:textColor="#03A9F4"
                 android:textSize="25sp"
                 android:textStyle="bold"

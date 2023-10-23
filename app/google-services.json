@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487601902245",
+    "project_id": "moyna-a1fb7",
+    "storage_bucket": "moyna-a1fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487601902245:android:74d09be5be70a79dba734c",
+        "android_client_info": {
+          "package_name": "com.example.moyna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDUYVeiphkWnKiGDhejZM7RtGaWJSJT6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
