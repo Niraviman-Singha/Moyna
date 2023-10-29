@@ -51,22 +51,26 @@ class SetupProfileActivity : AppCompatActivity() {
                     .child(auth!!.uid!!)
                 reference.putFile(selectedImage!!).addOnCompleteListener{
                     if (it.isSuccessful){
-                        val imageUrl = it.toString()
-                        val uid = auth!!.uid
-                        val phone = auth!!.currentUser!!.phoneNumber
-                        val name:String = binding.nameET.text.toString()
-                        val user = User(uid!!,name,phone!!,imageUrl)
+                        reference.downloadUrl.addOnCompleteListener {
+                            val imageUrl = it.toString()
+                            val uid = auth!!.uid
+                            val phone = auth!!.currentUser!!.phoneNumber
+                            val name:String = binding.nameET.text.toString()
+                            val user = User(uid!!,name,phone!!,imageUrl)
 
-                        database!!.reference
-                            .child("users")
-                            .child(uid)
-                            .setValue(user)
-                            .addOnCompleteListener {
-                                dialog!!.dismiss()
-                                val intent = Intent(this,MainActivity::class.java)
-                                startActivity(intent)
-                                finish()
-                            }
+                            database!!.reference
+                                .child("users")
+                                .child(uid)
+                                .setValue(user)
+                                .addOnCompleteListener {
+                                    dialog!!.dismiss()
+                                    val intent = Intent(this,MainActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                }
+
+                        }
+
 
                     } else{
                         val imageUrl = it.toString()
@@ -108,7 +112,7 @@ class SetupProfileActivity : AppCompatActivity() {
                     reference.downloadUrl.addOnCompleteListener {
                         val filePath = it.toString()
                         val obj = HashMap<String,Any>()
-                        obj["image"] = filePath
+                        obj["image/*"] = filePath
 
                         database!!.reference
                             .child("users")
