@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Moyna"
         tools:targetApi="31">
         <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetupProfileActivity"
             android:exported="false" />
         <activity
